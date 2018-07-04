@@ -38,10 +38,7 @@ Route::post('/cancel', 'CheckoutController@Cancel')->name('payment.cancel');
 Route::get('/payment', 'CheckoutController@Payment')->name('payment');
 
 
-Route::get('/payments/success', function ()
-{
-	return 'Success';
-});
+Route::post('/payments/success', 'CheckoutController@Success');
 Route::get('/payments/fails', function () {
 	return 'fails';
 });

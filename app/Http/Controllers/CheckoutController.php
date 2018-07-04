@@ -10,6 +10,7 @@ use App\Checkout;
 use App\Payment;
 use App\Order;
 use App\Order_detail;
+
 use Cart;
 use Session;
 use Auth;
@@ -337,7 +338,7 @@ class CheckoutController extends Controller
         }elseif($request->payment_method == 'ssl_commerz'){
             $this->ssl_commerz();
         }else {
-            return 'paypal';            
+            return view('paypal');            
         }
     }
 

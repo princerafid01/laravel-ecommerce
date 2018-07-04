@@ -38,7 +38,7 @@
 				  @foreach($orders as $order)
 				<tr>
                   <td>{{ $order->id }}</td>
-                  <td>{{ App\User::find($order->id)->name }}</td>
+                  <td>{{ App\User::find($order->customer_id)->name }}</td>
                   <td>{{ $order->order_total }}</td>
                   <td>{{ $order->order_status }}</td>
 				  	<td> 
